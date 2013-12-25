@@ -6,22 +6,10 @@
   margin-left: -50%;
 }
 
+.mod_list{margin:10px;}
+
 .c_tx1{color:#FF0000;}
 /*===== 组件 =====*/
-
-    /*===== 列表 =====*/
-    .mod_list_item{display:block; position:relative; padding:10px; border-top:1px solid #F7F7F7; border-bottom:1px solid #CCC;}
-        .mod_list_item:first-child{border-top:none;}
-        .mod_list_item:last-child{border-bottom:none;}
-        .mod_list_item:after{content:" "; position:absolute; right:10px; top:50%; margin-top:-4px; width:4px; height:8px; background:url("../img/ico_arrow.png") no-repeat 0 0;}
-        .mod_list_info{font-size:12px;}
-        .mod_list_info p{margin-top:5px;}
-        
-        /*===== 图文 =====*/
-        .mod_photo .mod_list_item{padding-left:80px;}
-        .mod_photo .mod_list_photo{position:absolute; left:10px; top:10px;}
-        .mod_photo .mod_list_photo img{display:block;}
-
     /*===== 按钮 =====*/
     .b_nav,
     .b_buylist,
@@ -46,7 +34,7 @@
 /*===== 首页 sy =====*/
 
         /*===== 导航 =====*/
-        .sy_nav a{display:inline-block; width:33%; height:80px; text-align:center;}
+        .sy_nav a{display:inline-block; width:33%; height:80px; text-align:center;margin:10px 0;}
         .sy_nav a:nth-child(3n-1){width:34%;}
         .sy_nav i{display:block; margin:10px auto; width:32px; height:32px;background-size:cover;background-repeat:no-repeat;}
         .sy_nav .ico_ios{background-image:url("../img/OS_Apple.png");}
