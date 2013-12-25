@@ -1,0 +1,30 @@
+{
+  "name": "mobilekb",
+  "version": "1.0.0",
+  "keywords": [
+    "framework",
+    "webapp",
+    "javascript",
+    "html5",
+    "xojs"
+  ],
+  "description": "mobile kb",
+  "repository": "git://github.com/oxox/mobilekb.git",
+  "homepage": "http://oxox.io/mobilekb",
+  "author": {
+    "name": "oxox.io",
+    "site": "http://oxox.io"
+  },
+  "license": [{"type": "MIT"}],
+  "devDependencies": {
+    "connect": "*",
+    "grunt":"*",
+    "grunt-contrib-uglify":"*",
+    "grunt-contrib-jshint":"*",
+    "grunt-contrib-qunit":"*",
+    "grunt-contrib-watch":"*",
+    "grunt-contrib-concat":"*",
+    "grunt-concat-css":"*",
+    "grunt-css":"*"
+  }
+}
