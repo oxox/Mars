@@ -1,0 +1,36 @@
+<!--XO Page Layout-->
+<article id="xoview-ios-2014-01-13-position-fixed-not-working" class="xo_page">
+    <div class="xo_page_inner">
+        <!--S header-->
+        <header class="navbar navbar-default navbar-static-top" role="banner">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="javascript:;">fixed定位失效</a>
+            </div>
+            <a href="#ios/index" data-back="ios/index" class="navbar-btn pull-left"><span class="b_back"></span></a>
+        </header>
+        <!--E header-->
+        <section class="xo_section xo_scroll current">
+
+            <!--S 页面内容-->
+            <style>
+            .test-page{margin:15px 10px;}
+            .long-txt{background:#eee;border-radius: 5px;margin-bottom:10px;line-height: 1.5;padding:10px;}
+            .fixed-elm{position: fixed;left:10px;bottom:10px;right:10px;height:30px;line-height: 30px;color:#fff;text-align: center;background-color: rgba(0,0,0,.5);}
+            </style>
+            <div class="test-page">
+                <div class="long-txt">
+                    a transformed element creates a containing block even for descendants that have been set to position: fixed.  In other words, the containing block for a fixed-position descendant of a transformed element is the transformed element, not the viewport.  Furthermore, if the transformed element is in the normal flow, it will scroll with the document and the fixed-position descendants will scroll with it.
+                </div>
+                <div class="long-txt">
+                    如果一个应用了css3 transform的元素里面包含fixed定位的元素，在webkit核心的浏览器下，该fixed定位的元素会失效，其实际定位效果类似绝对定位，会跟着滚动条的滚动而滚动！
+                </div>
+                <div class="fixed-elm">
+                    I'm position fixed!
+                </div>
+            </div>
+            <!--E 页面内容-->
+
+        </section>
+    </div>
+</article>
+<!--页面框架-->
