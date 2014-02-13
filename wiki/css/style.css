@@ -41,3 +41,9 @@
         .sy_nav .ico_android{background-image:url("../img/OS_Android.png");}
         .sy_nav .ico_wp{background-image:url("../img/OS_Windows.png");}
         .sy_nav .ico_pf{background-image:url("../img/Performance.png");}
+
+
+/*======== lizhi common========*/
+h2{font-size: 16px;}
+h4{margin-bottom: 5px;}
+body{line-height: 1.5;}

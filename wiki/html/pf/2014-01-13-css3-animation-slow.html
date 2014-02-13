@@ -1,0 +1,37 @@
+<!--XO Page Layout-->
+<article id="xoview-pf-2014-01-13-css3-animation-slow" class="xo_page">
+    <div class="xo_page_inner">
+        <!--S header-->
+        <header class="navbar navbar-default navbar-static-top" role="banner">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="javascript:;">css3动画卡顿</a>
+            </div>
+            <a href="#ios/index" data-back="ios/index" class="navbar-btn pull-left"><span class="b_back"></span></a>
+        </header>
+        <!--E header-->
+        <section class="xo_section xo_scroll current">
+
+            <!--S 页面内容-->
+            <style>
+            .test-page{margin:15px 10px;}
+            .long-txt{background:#eee;border-radius: 5px;margin-bottom:10px;line-height: 1.5;padding:10px;}
+            .fixed-elm{position: fixed;left:10px;bottom:10px;right:10px;height:30px;line-height: 30px;color:#fff;text-align: center;background-color: rgba(0,0,0,.5);}
+            </style>
+            <div class="test-page">
+                <div class="long-txt">
+                    <p>这是一个简单的拖动代码,区别仅仅是一个开启3d，一个没有。</p>
+                    <p>_drag.style.webkitTransform = "translate3D(" + _drag._x + "px," + _drag._y + "px,0px)";</p>
+                    <p>_drag.style.webkitTransform = "translate(" + _drag._x + "px," + _drag._y + "px)";</p>
+                    <p><img src="wiki/img/pf/pf_0004.png" alt="卡顿" /></p>
+                    <p>没开启3d的时候会出现Layout，和Paint，使得性能开销增大。</p>
+                </div>
+                <div class="long-txt">
+                    <p><strong style="color:red">注：</strong> 不要因为3d性能好就大量使用，当页面3d元素增多，会使Composite Layers的开销增大，所以根据项目需要添加。<p />
+                </div>
+            </div>
+            <!--E 页面内容-->
+
+        </section>
+    </div>
+</article>
+<!--页面框架-->

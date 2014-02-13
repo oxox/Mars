@@ -1,0 +1,53 @@
+<!--XO Page Layout-->
+<article id="xoview-pf-2014-01-13-css3-animation-blink" class="xo_page">
+    <div class="xo_page_inner">
+        <!--S header-->
+        <header class="navbar navbar-default navbar-static-top" role="banner">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="javascript:;">ios 事件代理失效</a>
+            </div>
+            <a href="#pf/index" data-back="pf/index" class="navbar-btn pull-left"><span class="b_back"></span></a>
+        </header>
+        <!--E header-->
+        <section class="xo_section xo_scroll current">
+
+            <!--S 页面内容-->
+            <style>
+            .test-page{margin:15px 10px;}
+            .long-txt{background:#eee;border-radius: 5px;margin-bottom:10px;line-height: 1.5;padding:10px;}
+            .fixed-elm{position: fixed;left:10px;bottom:10px;right:10px;height:30px;line-height: 30px;color:#fff;text-align: center;background-color: rgba(0,0,0,.5);}
+            </style>
+            <div class="test-page">
+                <div class="long-txt">
+<pre>
+<strong>css:</strong>
+    .animate{
+            background: blue;
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            margin: auto;
+            -webkit-animation-name: 'imgZoom';
+            -webkit-animation-duration: 13s;
+            -webkit-animation-timing-function: ease;
+        }
+        @-webkit-keyframes imgZoom{
+            0% {-webkit-transform:scale(0.01);}
+            100% {-webkit-transform:scale(1);}
+        }
+<strong>html：</strong>
+    &lt;div class=&quot;animate&quot;&gt;&lt;/div&gt;
+</pre>
+                </div>
+                <div class="long-txt">
+                    <p><img src="wiki/img/pf/pf_0002.png" alt="闪烁" /></p>
+                    <p style="color:red">从上图中可以看出添加了3d属性之后，最后重绘区域不在是整个页面，而是目标元素。（timeline已经说明了一切）<p />
+                    <p>这个实例从运行上看没有任何闪烁，但是试想如果当页面元素很多的时候，需要重绘大量的元素的时候，页面闪烁就难以避免了。</p>
+                </div>
+            </div>
+            <!--E 页面内容-->
+
+        </section>
+    </div>
+</article>
+<!--页面框架-->

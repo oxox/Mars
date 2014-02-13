@@ -11,7 +11,7 @@
         <!--E header-->
         <section class="xo_section xo_scroll current">
 
-            <!--S 页面内容-->
+            <!--S 页面内容 demo
             <div class="mod_list">
                 <div class="mod_list_item">
                     <a href="javascript:;">带链接内容<i class="ico ico_arrow"></i></a>
@@ -30,7 +30,61 @@
                     非链接内容
                 </div>
             </div>
-            <!--E 页面内容-->
+            E 页面内容-->
+
+            <!--S gif 性能影响-->
+            <div class="mod_list">
+                <div class="mod_list_item">
+                    <h2><a href="javascript:;">gif性能影响</a></h2>
+                </div>
+                <div class="mod_list_item">
+                    <a href="javascript:;">
+                        <h4>timeline手机端测试结果</h4>
+                        <p>当页面没有做任何操作的时候，timeline中会重复出现：<b>Rasterize</b>, <b>Paint</b>, <b>Composite Layers</b>，而且gif越多性能消耗越大。</p>
+                        <img src="wiki/img/pf/pf_0001.png" alt="gif性能影响" />
+                    </a>
+                </div>
+                <div class="mod_list_item">
+                    <h4>改善方案：</h4>
+                    <ol>
+                        <li>去掉页面中的gif动画，用静态图片来替换。</li>
+                    </ol>
+                </div>
+            </div>
+            <!--E gif 性能影响-->
+            
+            <!--S 动画闪烁-->
+            <div class="mod_list">
+                <div class="mod_list_item">
+                    <h2><a href="javascript:;">css3动画闪烁 和 GPU层</a></h2>
+                </div>
+                <div class="mod_list_item">
+                    <a href="#pf/2014-01-13-css3-animation-blink">
+                        <h4>当执行css3动画的时候会出现<strong style="color:red">闪烁</strong></h4>
+                        <p>点击查看demo实例</p>
+                        <i class="ico ico_arrow"></i>
+                    </a>
+                </div>
+                <div class="mod_list_item">
+                    <a href="#pf/2014-01-13-css3-animation-slow">
+                        <h4>当执行css3动画的时候会出现<strong style="color:red">卡顿</strong></h4>
+                        <p>点击查看demo实例</p>
+                        <i class="ico ico_arrow"></i>
+                    </a>
+                </div>
+                <div class="mod_list_item">
+                    <h4>改善方案：</h4>
+                    <p>GPU加速，可用以下属性进行3d加速：</p>
+                    <ol>
+                        <li>-webkit-backface-visibility: hidden;</li>
+                        <li>-webkit-transform: translate3d(0, 0, 0);</li>
+                        <li>-webkit-transform-style: preserve-3d;</li>
+                        <li>-webkit-transform: translateZ(0);</li>
+                        <li>iframe浏览器默认是开启3d加速的</li>
+                    </ol>
+                </div>
+            </div>
+            <!--E 动画闪烁-->
 
         </section>
     </div>

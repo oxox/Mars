@@ -1,0 +1,50 @@
+<!--XO Page Layout-->
+<article id="xoview-ios-2014-02-13-event-delegation-not-working" class="xo_page">
+    <div class="xo_page_inner">
+        <!--S header-->
+        <header class="navbar navbar-default navbar-static-top" role="banner">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="javascript:;">ios 事件代理失效</a>
+            </div>
+            <a href="#ios/index" data-back="ios/index" class="navbar-btn pull-left"><span class="b_back"></span></a>
+        </header>
+        <!--E header-->
+        <section class="xo_section xo_scroll current">
+
+            <!--S 页面内容-->
+            <style>
+            .test-page{margin:15px 10px;}
+            .long-txt{background:#eee;border-radius: 5px;margin-bottom:10px;line-height: 1.5;padding:10px;}
+            .fixed-elm{position: fixed;left:10px;bottom:10px;right:10px;height:30px;line-height: 30px;color:#fff;text-align: center;background-color: rgba(0,0,0,.5);}
+            </style>
+            <div class="test-page">
+                <div class="long-txt">
+<pre>
+<strong>html:</strong>
+    &lt;div&gt;
+        &lt;span id=&quot;span_1&quot;&gt;span_1&lt;/span&gt;
+        &lt;span id=&quot;span_2&quot;&gt;span_2&lt;/span&gt;
+        &lt;div id=&quot;dv_1&quot;&gt;dv_1&lt;/div&gt;
+        &lt;a href=&quot;javascript:;&quot; id=&quot;a_1&quot;&gt;a_1&lt;/a&gt;
+    &lt;/div&gt;
+<strong>js:</strong>
+    document.addEventListener('click', function(e) {
+        alert('bind document e.target.id = '+e.target.id);
+    },false);
+</pre>
+                </div>
+                <div class="long-txt">
+                    <p style="color:red">上面的代码在ios下点击 span_1, span_2, dv_1 都没有弹出框。<p />
+                    <h4>解决方案：</h4>
+                    <p>1, 标签加上 <b>onclick</b> 属性</p> 
+                    <pre><span onclick></span></pre>
+                    <p>2, 或者在body下添加一个外层</p>
+                    <pre><div onclick></div></pre>
+                </div>
+            </div>
+            <!--E 页面内容-->
+
+        </section>
+    </div>
+</article>
+<!--页面框架-->
