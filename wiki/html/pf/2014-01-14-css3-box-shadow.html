@@ -1,5 +1,5 @@
 <!--XO Page Layout-->
-<article id="xoview-pf-2014-01-13-css3-animation-slow" class="xo_page">
+<article id="xoview-pf-2014-01-14-css3-box-shadow" class="xo_page">
     <div class="xo_page_inner">
         <!--S header-->
         <header class="navbar navbar-default navbar-static-top" role="banner">
@@ -19,14 +19,9 @@
             </style>
             <div class="test-page">
                 <div class="long-txt">
-                    <p>这是一个简单的拖动代码,区别仅仅是一个开启3d，一个没有。</p>
-                    <p>_drag.style.webkitTransform = "translate3D(" + _drag._x + "px," + _drag._y + "px,0px)";</p>
-                    <p>_drag.style.webkitTransform = "translate(" + _drag._x + "px," + _drag._y + "px)";</p>
-                    <p><img src="wiki/img/pf/pf_0004.png" alt="卡顿" /></p>
-                    <p>没开启3d的时候会出现Layout，和Paint，使得性能开销增大。</p>
-                </div>
-                <div class="long-txt">
-                    <p><strong style="color:red">注：</strong> 不要因为3d性能好就大量使用，当页面3d元素增多，会使Composite Layers的开销增大，所以根据项目需要添加。<p />
+                    <p><a href="javascript:window.location='wiki/img/pf/pf_0005.png'"><img src="wiki/img/pf/pf_0005.png" alt="box-shadow" width="100%" /></a></p>
+                    <p>测试机（MI2），测试方式chrome调试手机，并开启Enable continuous page repainting。</p>
+                    <p style="color:red">最后两条测试条件为15个宽高都为100px的div，其他为50个宽高为100px的div。（原因是最后两条希望在当前视图页面显示出所有div）</p>
                 </div>
             </div>
             <!--E 页面内容-->

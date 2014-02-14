@@ -1,0 +1,43 @@
+<!--XO Page Layout-->
+<article id="xoview-android-2014-01-13-touchmove-execute-once" class="xo_page">
+    <div class="xo_page_inner">
+        <!--S header-->
+        <header class="navbar navbar-default navbar-static-top" role="banner">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="javascript:;">tochmove只执行一次</a>
+            </div>
+            <a href="#android/index" data-back="android/index" class="navbar-btn pull-left"><span class="b_back"></span></a>
+        </header>
+        <!--E header-->
+        <section class="xo_section xo_scroll current">
+
+            <!--S 页面内容-->
+            <style>
+            .test-page{margin:15px 10px;}
+            .long-txt{background:#eee;border-radius: 5px;margin-bottom:10px;line-height: 1.5;padding:10px;}
+            .fixed-elm{position: fixed;left:10px;bottom:10px;right:10px;height:30px;line-height: 30px;color:#fff;text-align: center;background-color: rgba(0,0,0,.5);}
+            </style>
+            <div class="test-page">
+                <div class="long-txt">
+                    touchmove events in Android web browsers have a really serious bug. If you don't include the following code, the touchmove event will fire once, but not again until you're done moving your touch, which utterly kills the usefulness of the touchmove event. It's a weird one, and may very well break more advanced touch logic that works on iOS. But if you preventDefault() on the touchstart event, your touchmove will function as expected.
+                </div>
+                <div class="long-txt">
+                    
+<pre>element.addEventListener( "touchstart", function(e){ onStart(e); }, false );
+function onStart ( touchEvent ) {
+  if( navigator.userAgent.match(/Android/i) ) {
+    touchEvent.preventDefault();
+  }
+}</pre>
+                </div>
+                <div class="long-txt">
+                    <strong>解决方法：</strong>
+                    <p>在touchstart 方法中抑制默认事件。</p>
+                </div>
+            </div>
+            <!--E 页面内容-->
+
+        </section>
+    </div>
+</article>
+<!--页面框架-->
